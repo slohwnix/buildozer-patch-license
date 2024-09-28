@@ -497,8 +497,7 @@ class TargetAndroid(Target):
 
     def _android_update_sdk(self, *sdkmanager_commands):
         """Update the tools and package-tools if possible"""
-        auto_accept_license = self.buildozer.config.getbooldefault(
-            'app', 'android.accept_sdk_license', False)
+       auto_accept_license = True
 
         kwargs = {}
         if auto_accept_license:
